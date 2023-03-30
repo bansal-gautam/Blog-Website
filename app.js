@@ -54,10 +54,9 @@ app.get("/posts/:postName", (req, res) => {
 
     if(storedTitle === requestedTitle) {
       res.render('post', {
-        postPage: post,
+        title: post.title,
+        content: post.content
       });
-    } else {
-      res.redirect("/");
     }
   });
 });
